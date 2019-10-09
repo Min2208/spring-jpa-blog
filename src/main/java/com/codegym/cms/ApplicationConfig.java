@@ -24,6 +24,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.spring4.SpringTemplateEngine;
@@ -134,5 +135,10 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
         registry.addFormatter(new BlogFormatter(applicationContext.getBean(BlogService.class)));
     }
 
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/img/**") //
+                .addResourceLocations("/WEB-INF/images/").setCachePeriod(31556926);
 
+    }
 }
