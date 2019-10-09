@@ -8,15 +8,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.data.domain.Pageable;
 
+import javax.print.attribute.standard.Media;
+import java.awt.*;
 import java.util.Optional;
+import java.util.List;
 
 @Controller
 @RequestMapping("blog")
+
 public class BlogController {
     @Autowired
     private BlogService blogService;
@@ -83,5 +90,22 @@ public class BlogController {
         blogService.delete(id);
         return "redirect:/blog";
     }
+    // Web Service
+    @RequestMapping(value = "/", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Blog>> lisBlog(){
+        List<Blog> blogs = blogService.findAll();
+        if (blogs.isEmpty()){
+            return new ResponseEntity<List<Blog>>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<List<Blog>>(blogs,HttpStatus.OK);
+    }
 
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> bodyBlog(@PathVariable long id){
+        Blog blog=blogService.findOne(id);
+        if(blog==null){
+            return new ResponseEntity<String>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<String>(blog.getBody(),HttpStatus.OK);
+    }
 }
