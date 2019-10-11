@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -12,7 +13,7 @@
 <body>
 <form>
     <tr>
-        <td><input type="text" name="name"></td>
+        <td><input type="text" name="name" th:value="${name}"></td>
         <td><input type="submit" value="Search"></td>
     </tr>
 </form>
@@ -28,7 +29,7 @@
             <td colspan="2"><a th:href="@{/blog/add}">Add New Blog</a></td>
         </tr>
         <tr th:each="blog: ${blogs}">
-            <td th:text="${blog.name}"></td>
+            <td ><a th:href="@{/blog/info/{id}(id=${blog.getId()})}"><span th:text="${blog.name}"></span></a></td>
             <td th:text="${blog.description}"></td>
             <td th:text="${blog.category.name}"></td>
             <td><a th:href="@{/blog/edit(id=${blog.id})}">edit</a></td>
@@ -42,10 +43,20 @@
     <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>
     <a th:href="@{'/blog'(page=${blogs.number + 1})}" th:if="${blogs.hasNext()}">Next</a>
 </div>
+Language: <a href="?lang=en">English</a> | <a href="?lang=fr">French</a>
+<div sec:authorize="isAuthenticated()">
+    <div sec:authorize="hasRole('USER')">
+        <a th:href="@{/user}">My Profile</a>
+    </div>
+    <div sec:authorize="hasRole('ADMIN')">
+        <a th:href="@{/admin}">My Profile</a>
+    </div>
+    <a th:href="@{/logout}">Logout</a>
+</div>
 
 
-<img src="/img/samsung.jpeg" alt="">
+<img src="/img/ipx.jpeg" alt="">
 <img src="/img/iphone.jpeg" alt="">
-<img src="/img/samsung.jpg" alt="">
+
 </body>
 </html>

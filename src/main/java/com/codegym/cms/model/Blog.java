@@ -1,6 +1,7 @@
 package com.codegym.cms.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "Blog")
@@ -8,7 +9,10 @@ public class Blog implements Cloneable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @NotEmpty
     private String name;
+
     private String description;
 
     public Blog(String name, String description, String body) {

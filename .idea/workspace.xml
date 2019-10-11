@@ -2,20 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e19a4957-4883-49f7-ab79-b4f47b8d23fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/iphone.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/samsung.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/samsung.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/configuration/CustomSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/configuration/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/configuration/SecurityWebApplicationInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/message_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/message_fr.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/blog/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/cms/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/cms/ApplicationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/cms/ApplicationConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/cms/ApplicationInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/cms/controller/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/cms/controller/BlogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/cms/model/Blog.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/cms/model/Blog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/Spring-blog-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Spring-blog-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/cms/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/cms/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/configuration/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/cms/ApplicationInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/configuration/ApplicationInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/cms/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/cms/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/iphone.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/samsung.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/samsung.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/blog/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/blog/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/blog/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/blog/info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/blog/list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,6 +59,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="a110b703a2dede7c9bb6f12a61a1bb3ee825843a" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -56,13 +79,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/blog" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.6881259" />
@@ -70,6 +94,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/blog" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/codegym/cms/configuration" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/images" />
     </key>
   </component>
@@ -258,7 +285,18 @@
       <workItem from="1570550658009" duration="644000" />
       <workItem from="1570626708869" duration="7502000" />
       <workItem from="1570637043348" duration="1501000" />
-      <workItem from="1570638574902" duration="276000" />
+      <workItem from="1570638574902" duration="569000" />
+      <workItem from="1570675834839" duration="2587000" />
+      <workItem from="1570678601257" duration="214000" />
+      <workItem from="1570678854829" duration="826000" />
+      <workItem from="1570683352850" duration="383000" />
+      <workItem from="1570714516679" duration="737000" />
+      <workItem from="1570715260161" duration="759000" />
+      <workItem from="1570721346011" duration="627000" />
+      <workItem from="1570723257508" duration="7000" />
+      <workItem from="1570723491286" duration="12000" />
+      <workItem from="1570761495679" duration="846000" />
+      <workItem from="1570778434565" duration="7061000" />
     </task>
     <servers />
   </component>

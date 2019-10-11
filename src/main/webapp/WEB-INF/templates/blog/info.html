@@ -5,41 +5,34 @@
     <title>Customer Information</title>
 </head>
 <body>
-<form action="/customers" method="post">
+<form>
     <fieldset>
-        <legend>Customer Information</legend>
-        <input type="hidden" name="id" th:value="${customer.id}">
+        <legend>Blog Information</legend>
         <table>
-            <tr>
-                <td>Id</td>
-                <td th:text="${customer.id}"></td>
-            </tr>
+            <tr><td th:text="${blog.id}"></td></tr>
             <tr>
                 <td>Name</td>
-                <td>
-                    <input type="text" name="name" th:value="${customer.name}">
+                <td th:text="${blog.name}">
+
                 </td>
             </tr>
             <tr>
-                <td>Email</td>
-                <td>
-                    <input type="text" name="email" th:value="${customer.email}">
+                <td>Description</td>
+                <td th:text="${blog.description}">
+
                 </td>
             </tr>
             <tr>
-                <td>Address</td>
-                <td>
-                    <input type="text" name="address" th:value="${customer.address}">
+                <td>Body</td>
+                <td th:text="${blog.body}">
+
                 </td>
             </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="Update">
-                </td>
-            </tr>
+            <tr><td th:text="${blog.category.name}"></td></tr>
+
         </table>
     </fieldset>
 </form>
-<a href="/customers">Back to list</a>.
+<a href="/blog">Back to list</a>.
 </body>
 </html>

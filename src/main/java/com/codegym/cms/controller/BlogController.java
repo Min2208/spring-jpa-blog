@@ -12,6 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.data.domain.Pageable;
@@ -34,6 +36,29 @@ public class BlogController {
     @ModelAttribute("category")
     public Iterable<Category> allCategory(){
         return categoryService.findAll();
+    }
+
+    @GetMapping("home")
+    public ModelAndView home(@RequestParam("name") Optional<String> name, Pageable pageable){
+        Sort sort = new Sort(new Sort.Order(Sort.Direction.ASC,"id"));
+        pageable = new PageRequest(pageable.getPageNumber(),2,sort);
+        ModelAndView modelAndView = new ModelAndView("blog/home");
+        Page<Blog> blogs;
+        if (name.isPresent()){
+            blogs= blogService.search(name.get(),pageable);
+        }else {
+            blogs=blogService.findAll(pageable);
+        }
+
+        modelAndView.addObject("blogs",blogs);
+
+        return modelAndView;
+    }
+
+    @GetMapping("/info/{id}")
+    public ModelAndView info(@PathVariable long id){
+        ModelAndView modelAndView = new ModelAndView("blog/info","blog",blogService.findOne(id));
+        return modelAndView;
     }
 
     @GetMapping
@@ -74,10 +99,16 @@ public class BlogController {
         return modelAndView;
     }
     @PostMapping("add")
-    public String addBlog(Blog blog){
-        blogService.save(blog);
-        return "redirect:/blog";
+    public String addBlog(@Validated Blog blog, BindingResult bindingResult){
+        System.out.println(bindingResult.hasFieldErrors());
+        if (bindingResult.hasFieldErrors()){
+            return "create";
+        }else {
 
+
+            blogService.save(blog);
+            return "redirect:/blog";
+        }
     }
 
     @GetMapping("remove")
